@@ -6,6 +6,7 @@
 
     <groupId>com.study</groupId>
     <artifactId>springCloud</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -15,6 +16,8 @@
     </parent>
     <modules>
         <module>eurekaServer</module>
+        <module>eureka_hi</module>
+        <module>service-ribbon</module>
     </modules>
 
     <properties>
@@ -29,6 +32,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -50,6 +58,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+          <!--      <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <fork>true</fork>
+                    </configuration>
+                </plugin>-->
         </plugins>
     </build>
 
